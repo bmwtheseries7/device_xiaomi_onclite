@@ -12,11 +12,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from onclite device
 $(call inherit-product, device/xiaomi/onclite/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AfterlifeOS stuff.
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
+AFTERLIFE_MAINTAINER := bmwtheseries
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Flag Gapps
+AFTERLIFE_GAPPS := true
+GAPPS_CORE := true
+TARGET_INCUDE_CHROME := true
+TARGET_INCLUDE_CONTACTS := true
+TARGET_INCLUDE_DIALER := true
+TARGET_INCLUDE_GBOARD := true
+TARGET_INCLUDE_MAPS := true
+TARGET_INCLUDE_MESSAGES := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_onclite
+PRODUCT_NAME := afterlife_onclite
 PRODUCT_DEVICE := onclite
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 7
