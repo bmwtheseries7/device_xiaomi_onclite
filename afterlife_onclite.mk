@@ -20,6 +20,7 @@ AFTERLIFE_MAINTAINER := bmwtheseries
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES = 1080
 TARGET_USE_ECHO := true
+AFTERLIFE_GAPPS := true
 
 # Include our private certificate
 -include vendor/atiga-priv/keys/keys.mk
